@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Users, Target, Code2 } from 'lucide-react';
-import profileImage from 'figma:asset/b4b94259a31caf3cdacf96cc62d34201311b6962.png';
+import profileImage from '../../assets/fotodeperfil.png';
 
 export function AboutPage() {
   return (

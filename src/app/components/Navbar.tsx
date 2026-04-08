@@ -12,6 +12,7 @@ export function Navbar() {
     { label: 'Sobre mí', href: '/sobre-mi' },
     { label: 'Proyectos', href: '/proyectos' },
     { label: 'Experiencia', href: '/experiencia' },
+    { label: 'Testimonios', href: '/testimonios' },
     { label: 'Contacto', href: '/contacto' },
   ];
 

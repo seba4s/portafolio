@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { ExternalLink, Github } from 'lucide-react';
-import oneGameImage from 'figma:asset/f0d790da1127d43640d81f248eb39a3b572ee768.png';
+import oneGameImage from '../../assets/f0d790da1127d43640d81f248eb39a3b572ee768.png';
 
 export function ProjectsPage() {
   const projects = [
