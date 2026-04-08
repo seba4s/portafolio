@@ -1,0 +1,185 @@
+import { motion } from 'motion/react';
+import { Card } from '../components/Card';
+import { Badge } from '../components/Badge';
+import { Briefcase, GraduationCap } from 'lucide-react';
+
+export function ExperiencePage() {
+  const technologies = [
+    'Java',
+    'Python',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Tailwind',
+    'GitHub',
+    'SQL',
+    'Node.js',
+    'MongoDB',
+    'TypeScript',
+  ];
+
+  const timeline = [
+    {
+      type: 'education',
+      title: 'Ingeniería de Software',
+      organization: 'Universidad',
+      period: '2022 - Presente',
+      description: 'Formación académica en desarrollo de software, algoritmos, estructuras de datos y arquitectura de sistemas.',
+    },
+    {
+      type: 'work',
+      title: 'Desarrollador Frontend',
+      organization: 'Proyecto Académico',
+      period: '2024',
+      description: 'Desarrollo de interfaces de usuario modernas utilizando React y Tailwind CSS para proyectos universitarios.',
+    },
+    {
+      type: 'work',
+      title: 'Desarrollador Full Stack',
+      organization: 'Freelance',
+      period: '2023 - 2024',
+      description: 'Desarrollo de aplicaciones web completas para clientes locales, desde la concepción hasta el despliegue.',
+    },
+  ];
+
+  return (
+    <section className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4">
+            Experiencia & <span className="text-[#22C55E]">Tecnologías</span>
+          </h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full"></div>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Timeline */}
+          <div>
+            <h3 className="text-2xl font-bold text-[#F9FAFB] mb-8">Trayectoria</h3>
+            <div className="space-y-6">
+              {timeline.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card hover={false}>
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                          item.type === 'education' 
+                            ? 'bg-[#3B82F6]/10' 
+                            : 'bg-[#22C55E]/10'
+                        }`}>
+                          {item.type === 'education' ? (
+                            <GraduationCap className={item.type === 'education' ? 'text-[#3B82F6]' : 'text-[#22C55E]'} size={24} />
+                          ) : (
+                            <Briefcase className="text-[#22C55E]" size={24} />
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-2 gap-4">
+                          <h4 className="font-bold text-[#F9FAFB]">{item.title}</h4>
+                          <span className="text-sm text-[#22C55E] whitespace-nowrap">{item.period}</span>
+                        </div>
+                        <p className="text-[#9CA3AF] text-sm mb-2">{item.organization}</p>
+                        <p className="text-[#9CA3AF] text-sm">{item.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h3 className="text-2xl font-bold text-[#F9FAFB] mb-8">Stack Tecnológico</h3>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card hover={false} className="h-full">
+                <div className="space-y-6">
+                  <p className="text-[#9CA3AF]">
+                    Dominio de tecnologías modernas para el desarrollo de aplicaciones web completas y escalables.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    {technologies.map((tech, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        whileHover={{ scale: 1.1 }}
+                      >
+                        <Badge className="cursor-default">{tech}</Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <div className="pt-6 border-t border-gray-800 space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[#F9FAFB]">Frontend Development</span>
+                        <span className="text-[#22C55E]">90%</span>
+                      </div>
+                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: '90%' }}
+                          transition={{ duration: 1, delay: 0.2 }}
+                          className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[#F9FAFB]">Backend Development</span>
+                        <span className="text-[#3B82F6]">85%</span>
+                      </div>
+                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: '85%' }}
+                          transition={{ duration: 1, delay: 0.4 }}
+                          className="h-full bg-gradient-to-r from-[#3B82F6] to-[#2563EB]"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[#F9FAFB]">Database Management</span>
+                        <span className="text-[#22C55E]">80%</span>
+                      </div>
+                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: '80%' }}
+                          transition={{ duration: 1, delay: 0.6 }}
+                          className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
