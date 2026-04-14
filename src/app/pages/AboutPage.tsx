@@ -2,11 +2,13 @@ import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Users, Target, Code2 } from 'lucide-react';
 import profileImage from '../../assets/fotodeperfil.png';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function AboutPage() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={2} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

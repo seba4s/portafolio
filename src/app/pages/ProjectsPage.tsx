@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { ExternalLink, Github } from 'lucide-react';
 import oneGameImage from '../../assets/f0d790da1127d43640d81f248eb39a3b572ee768.png';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function ProjectsPage() {
   const projects = [
@@ -18,8 +19,9 @@ export function ProjectsPage() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={3} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

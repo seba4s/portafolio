@@ -1,11 +1,13 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
+import { DecoCirclesGroup } from './DecoraCircles';
 
 export function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-24 pt-28">
-      <div className="max-w-7xl mx-auto w-full">
+    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-24 pt-28 relative overflow-hidden">
+      <DecoCirclesGroup count={3} />
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
           <div className="space-y-6 sm:space-y-8">

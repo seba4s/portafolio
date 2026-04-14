@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { Briefcase, GraduationCap } from 'lucide-react';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function ExperiencePage() {
   const techGroups = [
@@ -44,8 +45,9 @@ export function ExperiencePage() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={3} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

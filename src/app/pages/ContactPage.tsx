@@ -5,6 +5,7 @@ import { Input, Textarea } from '../components/Input';
 import { Button } from '../components/Button';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,8 +22,9 @@ export function ContactPage() {
   };
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={2} />
+      <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

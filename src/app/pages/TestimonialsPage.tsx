@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Quote, User, Briefcase, Code } from 'lucide-react';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function TestimonialsPage() {
   const testimonials = [
@@ -28,8 +29,9 @@ export function TestimonialsPage() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={2} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
