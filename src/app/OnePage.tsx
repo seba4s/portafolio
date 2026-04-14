@@ -19,11 +19,12 @@ const scrollToSection = (id: string) => {
 };
 
 function OnePage() {
-  // Opcional: scroll al hash si hay uno en la URL
+  // Siempre ir al inicio al cargar/recargar la página y limpiar el hash de la URL
   useEffect(() => {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
     if (window.location.hash) {
-      const id = window.location.hash.replace('#', '');
-      setTimeout(() => scrollToSection(id), 100);
+      history.replaceState(null, '', window.location.pathname);
     }
   }, []);
 
