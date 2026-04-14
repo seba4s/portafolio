@@ -19,6 +19,23 @@ export function AboutPage() {
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full"></div>
         </motion.div>
 
+        {/* Profile Image - Debajo del título */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/30 via-[#3B82F6]/30 to-transparent rounded-full blur-2xl"></div>
+            <img
+              src={profileImage}
+              alt="Sebastian Lopez Benavides"
+              className="relative w-56 h-56 sm:w-64 sm:h-64 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
+            />
+          </div>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content Cards */}
           <div className="space-y-6">
@@ -74,25 +91,13 @@ export function AboutPage() {
             </Card>
           </div>
 
-          {/* Right Column - Profile Image and Summary */}
+          {/* Right Column - Summary */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            {/* Profile Image */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/30 via-[#3B82F6]/30 to-transparent rounded-full blur-2xl"></div>
-                <img 
-                  src={profileImage} 
-                  alt="Sebastian López Benavides"
-                  className="relative w-64 h-64 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
-                />
-              </div>
-            </div>
-
             {/* Summary */}
             <div className="bg-gradient-to-br from-[#111827] to-[#0F172A] p-8 rounded-2xl border border-gray-800">
               <h3 className="text-2xl font-bold text-[#F9FAFB] mb-6">Mi enfoque</h3>
