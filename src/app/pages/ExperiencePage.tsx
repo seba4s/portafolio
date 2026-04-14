@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { Briefcase, GraduationCap } from 'lucide-react';
+import { DecoCirclesGroup } from '../components/DecoraCircles';
 
 export function ExperiencePage() {
   const techGroups = [
@@ -44,26 +45,27 @@ export function ExperiencePage() {
   ];
 
   return (
-    <section className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <DecoCirclesGroup count={3} />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4 text-balance">
             Experiencia & <span className="text-[#22C55E]">Tecnologías</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
           {/* Timeline */}
           <div>
-            <h3 className="text-2xl font-bold text-[#F9FAFB] mb-8">Trayectoria</h3>
-            <div className="relative space-y-6">
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#3B82F6]/60 via-[#22C55E]/60 to-transparent" />
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">Trayectoria</h3>
+            <div className="relative space-y-6 pl-4 sm:pl-0">
+              <div className="absolute left-10 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#3B82F6]/60 via-[#22C55E]/60 to-transparent" />
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
@@ -73,12 +75,12 @@ export function ExperiencePage() {
                   className="relative"
                 >
                   <span
-                    className={`absolute left-[18px] top-6 h-3 w-3 rounded-full ring-4 ring-[#0F172A] ${
+                    className={`absolute left-[22px] sm:left-[18px] top-6 h-3 w-3 rounded-full ring-4 ring-[#0F172A] ${
                       item.type === 'education' ? 'bg-[#3B82F6]' : 'bg-[#22C55E]'
                     }`}
                   />
                   <Card hover={false}>
-                    <div className="flex gap-4 pl-5 py-1">
+                    <div className="flex gap-3 sm:gap-4 pl-5 py-1">
                       <div className="flex-shrink-0">
                         <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
                           item.type === 'education' 
@@ -92,10 +94,10 @@ export function ExperiencePage() {
                           )}
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-2.5 gap-4">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-col xs:flex-row items-start justify-between mb-2.5 gap-1 xs:gap-4">
                           <h4 className="font-semibold text-[1.05rem] leading-tight text-[#F9FAFB]">{item.title}</h4>
-                          <span className="text-xs font-semibold tracking-wide text-[#22C55E] whitespace-nowrap bg-[#22C55E]/10 px-2 py-1 rounded-md border border-[#22C55E]/20">
+                          <span className="text-xs font-semibold tracking-wide text-[#22C55E] whitespace-nowrap bg-[#22C55E]/10 px-2 py-1 rounded-md border border-[#22C55E]/20 flex-shrink-0">
                             {item.period}
                           </span>
                         </div>
@@ -111,7 +113,7 @@ export function ExperiencePage() {
 
           {/* Technologies */}
           <div>
-            <h3 className="text-2xl font-bold text-[#F9FAFB] mb-8">Stack Tecnológico</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">Stack Tecnológico</h3>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}

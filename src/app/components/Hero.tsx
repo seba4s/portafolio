@@ -1,21 +1,23 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
+import { DecoCirclesGroup } from './DecoraCircles';
 
 export function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto w-full">
+    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-24 pt-28 relative overflow-hidden">
+      <DecoCirclesGroup count={3} />
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-[#22C55E] mb-4">Hola, soy</div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#F9FAFB] leading-tight">
+              <div className="text-[#22C55E] mb-3 sm:mb-4 text-sm sm:text-base">Hola, soy</div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F9FAFB] leading-tight text-balance">
                 Sebastian López
                 <br />
                 <span className="text-[#22C55E]">Benavides</span>
@@ -28,7 +30,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4"
             >
-              <h2 className="text-2xl sm:text-3xl text-[#9CA3AF]">
+              <h2 className="text-lg sm:text-xl md:text-2xl text-[#9CA3AF] leading-relaxed">
                 Estudiante de Ingeniería de Software | Desarrollador Full Stack
               </h2>
               <p className="text-lg text-[#9CA3AF] max-w-xl">
