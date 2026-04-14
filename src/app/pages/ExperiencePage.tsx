@@ -153,7 +153,8 @@ export function ExperiencePage() {
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
-                          animate={{ width: '90%' }}
+                          whileInView={{ width: '90%' }}
+                          viewport={{ once: true, amount: 0.8 }}
                           transition={{ duration: 1, delay: 0.2 }}
                           className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
                         />
@@ -168,7 +169,8 @@ export function ExperiencePage() {
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
-                          animate={{ width: '85%' }}
+                          whileInView={{ width: '85%' }}
+                          viewport={{ once: true, amount: 0.8 }}
                           transition={{ duration: 1, delay: 0.4 }}
                           className="h-full bg-gradient-to-r from-[#3B82F6] to-[#2563EB]"
                         />
@@ -183,7 +185,8 @@ export function ExperiencePage() {
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
-                          animate={{ width: '80%' }}
+                          whileInView={{ width: '80%' }}
+                          viewport={{ once: true, amount: 0.8 }}
                           transition={{ duration: 1, delay: 0.6 }}
                           className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
                         />
