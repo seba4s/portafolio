@@ -21,17 +21,18 @@ export function AboutPage() {
 
         {/* Profile Image - Debajo del título */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center mb-12"
+          initial={{ opacity: 0, y: 36, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.75, ease: 'easeOut' }}
+          className="flex justify-center mb-16"
         >
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/30 via-[#3B82F6]/30 to-transparent rounded-full blur-2xl"></div>
             <img
               src={profileImage}
               alt="Sebastian Lopez Benavides"
-              className="relative w-56 h-56 sm:w-64 sm:h-64 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
+              className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
             />
           </div>
         </motion.div>
