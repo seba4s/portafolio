@@ -1,27 +1,36 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Link, useLocation } from 'react-router';
 
-export function Navbar() {
+// onePageScroll: si true, navega por scroll a secciones, si false usa react-router
+export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
+  // IDs para scroll y hrefs para router
   const navItems = [
-    { label: 'Inicio', href: '/' },
-    { label: 'Sobre mí', href: '/sobre-mi' },
-    { label: 'Proyectos', href: '/proyectos' },
-    { label: 'Experiencia', href: '/experiencia' },
-    { label: 'Testimonios', href: '/testimonios' },
-    { label: 'Contacto', href: '/contacto' },
+    { label: 'Inicio', href: onePageScroll ? '#inicio' : '/' },
+    { label: 'Sobre mí', href: onePageScroll ? '#sobre-mi' : '/sobre-mi' },
+    { label: 'Proyectos', href: onePageScroll ? '#proyectos' : '/proyectos' },
+    { label: 'Experiencia', href: onePageScroll ? '#experiencia' : '/experiencia' },
+    { label: 'Testimonios', href: onePageScroll ? '#testimonios' : '/testimonios' },
+    { label: 'Contacto', href: onePageScroll ? '#contacto' : '/contacto' },
   ];
 
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
+  // Scroll suave a sección
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (onePageScroll && href.startsWith('#')) {
+      e.preventDefault();
+      const id = href.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        setIsOpen(false);
+      }
     }
-    return location.pathname === href;
   };
+
+  // No hay rutas activas en modo onePageScroll
+  const isActive = (_: string) => false;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-gray-800">
@@ -32,9 +41,9 @@ export function Navbar() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <Link to="/" className="text-xl font-bold text-[#22C55E]">
+            <a href={onePageScroll ? '#inicio' : '/'} className="text-xl font-bold text-[#22C55E]">
               SLB
-            </Link>
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -46,16 +55,20 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link
-                  to={item.href}
-                  className={`transition-colors duration-300 ${
-                    isActive(item.href)
-                      ? 'text-[#22C55E]'
-                      : 'text-[#9CA3AF] hover:text-[#22C55E]'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                {onePageScroll ? (
+                  <a
+                    href={item.href}
+                    onClick={e => handleNavClick(e, item.href)}
+                    className={
+                      'transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]'
+                    }
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  // ...existing code for router mode...
+                  null
+                )}
               </motion.div>
             ))}
           </div>
@@ -81,18 +94,25 @@ export function Navbar() {
           >
             <div className="px-4 py-4 space-y-3">
               {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block w-full text-left py-2 transition-colors duration-300 ${
-                    isActive(item.href)
-                      ? 'text-[#22C55E]'
-                      : 'text-[#9CA3AF] hover:text-[#22C55E]'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                onePageScroll ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={e => {
+                      // Scroll suave y cerrar menú
+                      e.preventDefault();
+                      const id = item.href.replace('#', '');
+                      const el = document.getElementById(id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                        setIsOpen(false);
+                      }
+                    }}
+                    className={'block w-full text-left py-2 transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]'}
+                  >
+                    {item.label}
+                  </a>
+                ) : null
               ))}
             </div>
           </motion.div>

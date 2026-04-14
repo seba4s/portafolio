@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
-import { Link } from 'react-router';
 
 export function Hero() {
   return (
@@ -43,17 +42,17 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Link to="/proyectos">
+              <a href="#proyectos">
                 <Button>
                   Ver proyectos
                   <ArrowRight size={20} />
                 </Button>
-              </Link>
-              <Link to="/contacto">
+              </a>
+              <a href="#contacto">
                 <Button variant="outline">
                   Contactar
                 </Button>
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
