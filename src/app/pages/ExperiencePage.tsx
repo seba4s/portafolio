@@ -78,7 +78,7 @@ export function ExperiencePage() {
                     }`}
                   />
                   <Card hover={false}>
-                    <div className="flex gap-4 pl-5">
+                    <div className="flex gap-4 pl-5 py-1">
                       <div className="flex-shrink-0">
                         <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
                           item.type === 'education' 
@@ -93,12 +93,14 @@ export function ExperiencePage() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-start justify-between mb-2 gap-4">
-                          <h4 className="font-bold text-[#F9FAFB]">{item.title}</h4>
-                          <span className="text-sm text-[#22C55E] whitespace-nowrap">{item.period}</span>
+                        <div className="flex items-start justify-between mb-2.5 gap-4">
+                          <h4 className="font-semibold text-[1.05rem] leading-tight text-[#F9FAFB]">{item.title}</h4>
+                          <span className="text-xs font-semibold tracking-wide text-[#22C55E] whitespace-nowrap bg-[#22C55E]/10 px-2 py-1 rounded-md border border-[#22C55E]/20">
+                            {item.period}
+                          </span>
                         </div>
-                        <p className="text-[#9CA3AF] text-sm mb-2">{item.organization}</p>
-                        <p className="text-[#9CA3AF] text-sm">{item.description}</p>
+                        <p className="text-[#CBD5E1] text-sm font-medium mb-2.5">{item.organization}</p>
+                        <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   </Card>
