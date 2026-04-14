@@ -71,7 +71,7 @@ function SectionFadeIn({ id, children }: { id: string; children: React.ReactNode
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
-    <section id={id} ref={ref} className="min-h-screen flex items-center py-24 px-4 sm:px-6 lg:px-8">
+    <section id={id} ref={ref} className="w-full">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}

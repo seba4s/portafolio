@@ -21,15 +21,15 @@ export function ContactPage() {
   };
 
   return (
-    <section className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4">
             Contacta<span className="text-[#22C55E]">me</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full mb-4"></div>
@@ -38,13 +38,13 @@ export function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-5 gap-6 sm:gap-8">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-2 space-y-6"
+            className="md:col-span-2 space-y-4 sm:space-y-6"
           >
             <Card hover={false}>
               <div className="flex items-start gap-4">
@@ -55,7 +55,7 @@ export function ContactPage() {
                   <h3 className="font-bold text-[#F9FAFB] mb-1">Email</h3>
                   <a 
                     href="mailto:jlopezbenavides73@gmail.com"
-                    className="text-[#9CA3AF] text-sm hover:text-[#22C55E] transition-colors"
+                    className="text-[#9CA3AF] text-sm hover:text-[#22C55E] transition-colors break-all"
                   >
                     jlopezbenavides73@gmail.com
                   </a>
