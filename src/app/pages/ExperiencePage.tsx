@@ -62,16 +62,23 @@ export function ExperiencePage() {
           {/* Timeline */}
           <div>
             <h3 className="text-2xl font-bold text-[#F9FAFB] mb-8">Trayectoria</h3>
-            <div className="space-y-6">
+            <div className="relative space-y-6">
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#3B82F6]/60 via-[#22C55E]/60 to-transparent" />
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative"
                 >
+                  <span
+                    className={`absolute left-[18px] top-6 h-3 w-3 rounded-full ring-4 ring-[#0F172A] ${
+                      item.type === 'education' ? 'bg-[#3B82F6]' : 'bg-[#22C55E]'
+                    }`}
+                  />
                   <Card hover={false}>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 pl-5">
                       <div className="flex-shrink-0">
                         <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
                           item.type === 'education' 
