@@ -4,19 +4,19 @@ import { Badge } from '../components/Badge';
 import { Briefcase, GraduationCap } from 'lucide-react';
 
 export function ExperiencePage() {
-  const technologies = [
-    'Java',
-    'Python',
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Tailwind',
-    'GitHub',
-    'SQL',
-    'Node.js',
-    'MongoDB',
-    'TypeScript',
+  const techGroups = [
+    {
+      title: 'Frontend',
+      items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind'],
+    },
+    {
+      title: 'Backend & Datos',
+      items: ['Node.js', 'Java', 'Python', 'SQL', 'MongoDB'],
+    },
+    {
+      title: 'Herramientas',
+      items: ['GitHub'],
+    },
   ];
 
   const timeline = [
@@ -121,16 +121,25 @@ export function ExperiencePage() {
                     Dominio de tecnologías modernas para el desarrollo de aplicaciones web completas y escalables.
                   </p>
                   
-                  <div className="flex flex-wrap gap-3">
-                    {technologies.map((tech, index) => (
+                  <div className="space-y-4">
+                    {techGroups.map((group, groupIndex) => (
                       <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                        whileHover={{ scale: 1.1 }}
+                        key={group.title}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.35, delay: groupIndex * 0.08 }}
+                        className="rounded-xl border border-gray-800 bg-[#0B1222] p-4"
                       >
-                        <Badge className="cursor-default">{tech}</Badge>
+                        <h4 className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6] mb-3">
+                          {group.title}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {group.items.map((tech) => (
+                            <Badge key={tech} className="cursor-default">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
                       </motion.div>
                     ))}
                   </div>
