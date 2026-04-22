@@ -102,14 +102,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:flex items-center justify-center"
+            className="relative flex items-center justify-center"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/30 via-[#3B82F6]/30 to-transparent rounded-full blur-2xl"></div>
               <img
                 src={profileImage}
                 alt="Sebastian Lopez Benavides"
-                className="relative w-96 h-96 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
+                className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
               />
             </div>
           </motion.div>

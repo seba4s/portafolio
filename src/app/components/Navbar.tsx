@@ -30,18 +30,24 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
     { label: t.nav.contact, href: onePageScroll ? '#contacto' : '/contacto' },
   ];
 
-  // Scroll suave a sección
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (onePageScroll && href.startsWith('#')) {
-      e.preventDefault();
-      const id = href.replace('#', '');
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        setIsOpen(false);
-        setIsLanguageMenuOpen(false);
-      }
-    }
+  const scrollToSection = (href: string) => {
+    if (!onePageScroll || !href.startsWith('#')) return;
+
+    const id = href.slice(1);
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const nav = document.querySelector('nav');
+    const navHeight = nav?.getBoundingClientRect().height ?? 0;
+    const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+
+    setIsOpen(false);
+    setIsLanguageMenuOpen(false);
+
+    requestAnimationFrame(() => {
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', `#${id}`);
+    });
   };
 
   return (
@@ -69,13 +75,13 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
                   transition={{ delay: index * 0.1 }}
                 >
                   {onePageScroll ? (
-                    <a
-                      href={item.href}
-                      onClick={(e) => handleNavClick(e, item.href)}
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection(item.href)}
                       className="transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]"
                     >
                       {item.label}
-                    </a>
+                    </button>
                   ) : null}
                 </motion.div>
               ))}
@@ -211,23 +217,14 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
 
               {navItems.map((item) => (
                 onePageScroll ? (
-                  <a
+                  <button
                     key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const id = item.href.replace('#', '');
-                      const el = document.getElementById(id);
-                      if (el) {
-                        el.scrollIntoView({ behavior: 'smooth' });
-                        setIsOpen(false);
-                        setIsLanguageMenuOpen(false);
-                      }
-                    }}
+                    type="button"
+                    onClick={() => scrollToSection(item.href)}
                     className="block w-full text-left py-2 transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]"
                   >
                     {item.label}
-                  </a>
+                  </button>
                 ) : null
               ))}
             </div>
