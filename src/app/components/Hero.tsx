@@ -58,6 +58,11 @@ export function Hero() {
                   {t.hero.contactCta}
                 </Button>
               </a>
+              <a href="/Sebastian%20Lopez%20CV.pdf" download="sebastian lopez cv.pdf">
+                <Button variant="outline">
+                  {t.footer.downloadCv}
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div
