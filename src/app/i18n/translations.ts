@@ -93,9 +93,6 @@ export const translations = {
       timeline3Org: 'Freelance',
       timeline3Period: '2023 - 2024',
       timeline3Description: 'Desarrollo de aplicaciones web completas para clientes locales, desde la concepcion hasta el despliegue.',
-      skillFrontend: 'Desarrollo frontend',
-      skillBackend: 'Desarrollo backend',
-      skillDatabase: 'Gestion de bases de datos',
     },
     testimonials: {
       role1: 'Companero de equipo - Universidad',
@@ -220,9 +217,6 @@ export const translations = {
       timeline3Org: 'Freelance',
       timeline3Period: '2023 - 2024',
       timeline3Description: 'Built complete web applications for local clients, from conception to deployment.',
-      skillFrontend: 'Frontend development',
-      skillBackend: 'Backend development',
-      skillDatabase: 'Database management',
     },
     testimonials: {
       role1: 'Teammate - University',
@@ -347,9 +341,6 @@ export const translations = {
       timeline3Org: 'Freelance',
       timeline3Period: '2023 - 2024',
       timeline3Description: 'Desenvolvimento de aplicacoes web completas para clientes locais, da concepcao ao deploy.',
-      skillFrontend: 'Desenvolvimento frontend',
-      skillBackend: 'Desenvolvimento backend',
-      skillDatabase: 'Gestao de banco de dados',
     },
     testimonials: {
       role1: 'Colega de equipe - Universidade',
@@ -474,9 +465,6 @@ export const translations = {
       timeline3Org: 'Freelance',
       timeline3Period: '2023 - 2024',
       timeline3Description: 'Developpement d applications web completes pour des clients locaux, de la conception au deploiement.',
-      skillFrontend: 'Developpement frontend',
-      skillBackend: 'Developpement backend',
-      skillDatabase: 'Gestion de base de donnees',
     },
     testimonials: {
       role1: 'Coequipier - Universite',

@@ -150,56 +150,6 @@ export function ExperiencePage() {
                       </motion.div>
                     ))}
                   </div>
-
-                  <div className="pt-6 border-t border-gray-800 space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">{t.experience.skillFrontend}</span>
-                        <span className="text-[#22C55E]">90%</span>
-                      </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: '90%' }}
-                          viewport={{ once: true, amount: 0.8 }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                          className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">{t.experience.skillBackend}</span>
-                        <span className="text-[#3B82F6]">85%</span>
-                      </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: '85%' }}
-                          viewport={{ once: true, amount: 0.8 }}
-                          transition={{ duration: 1, delay: 0.4 }}
-                          className="h-full bg-gradient-to-r from-[#3B82F6] to-[#2563EB]"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">{t.experience.skillDatabase}</span>
-                        <span className="text-[#22C55E]">80%</span>
-                      </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: '80%' }}
-                          viewport={{ once: true, amount: 0.8 }}
-                          transition={{ duration: 1, delay: 0.6 }}
-                          className="h-full bg-gradient-to-r from-[#22C55E] to-[#16A34A]"
-                        />
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </Card>
             </motion.div>
