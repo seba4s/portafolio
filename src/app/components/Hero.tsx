@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { DecoCirclesGroup } from './DecoraCircles';
 import { useTranslations } from '../i18n/translations';
-import profileImage from '../../assets/fotodeperfil.jpg';
+import profileImage from '../../assets/sebas.jpg';
 
 export function Hero() {
   const t = useTranslations();
@@ -109,7 +109,7 @@ export function Hero() {
               <img
                 src={profileImage}
                 alt="Sebastian Lopez Benavides"
-                className="relative w-64 h-64 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
+                className="relative w-96 h-96 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
               />
             </div>
           </motion.div>
