@@ -83,7 +83,7 @@ export const translations = {
       groupTools: 'Herramientas',
       timeline1Title: 'Ingeniería de Software',
       timeline1Org: 'Universidad',
-      timeline1Period: '2022 - Presente',
+      timeline1Period: '2024-Actual',
       timeline1Description: 'Formación académica en desarrollo de software, algoritmos, estructuras de datos y arquitectura de sistemas.',
       timeline2Title: 'Desarrollador Frontend',
       timeline2Org: 'Proyecto académico',
@@ -91,7 +91,7 @@ export const translations = {
       timeline2Description: 'Desarrollo de interfaces de usuario modernas utilizando React y Tailwind CSS para proyectos universitarios.',
       timeline3Title: 'Desarrollador Full Stack',
       timeline3Org: 'Freelance',
-      timeline3Period: '2023 - 2024',
+      timeline3Period: '2024',
       timeline3Description: 'Desarrollo de aplicaciones web completas para clientes locales, desde la concepción hasta el despliegue.',
     },
     testimonials: {
