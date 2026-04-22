@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Users, Target, Code2 } from 'lucide-react';
-import profileImage from '../../assets/fotodeperfil.jpg';
+import profileImage from '../../assets/fotodeperfil2.jpg';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
 import { useTranslations } from '../i18n/translations';
 

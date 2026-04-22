@@ -3,7 +3,8 @@ import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { DecoCirclesGroup } from './DecoraCircles';
 import { useTranslations } from '../i18n/translations';
-import profileImage from '../../assets/fotodeperfil2.jpg';
+import profileImage from '../../assets/fotodeperfil.jpg';
+
 
 export function Hero() {
   const t = useTranslations();
