@@ -3,8 +3,6 @@ import { useTranslations } from '../i18n/translations';
 
 export function Footer() {
   const t = useTranslations();
-  const cvFileName = 'sebastian lopez cv.pdf';
-  const cvFilePath = '/Sebastian%20Lopez%20CV.pdf';
 
   return (
     <footer className="bg-[#0F172A] border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
@@ -47,16 +45,6 @@ export function Footer() {
               <Mail size={20} />
             </a>
           </div>
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <a
-            href={cvFilePath}
-            download={cvFileName}
-            className="inline-flex items-center justify-center rounded-lg border-2 border-[#22C55E] px-6 py-3 font-medium text-[#22C55E] transition-colors duration-300 hover:bg-[#22C55E] hover:text-white"
-          >
-            {t.footer.downloadCv}
-          </a>
         </div>
       </div>
     </footer>
