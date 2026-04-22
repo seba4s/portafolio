@@ -102,7 +102,7 @@ export function AboutPage() {
             className="space-y-6"
           >
             {/* Summary */}
-            <div className="bg-gradient-to-br from-[#111827] to-[#0F172A] p-8 rounded-2xl border border-gray-800">
+            <div className="bg-[#111827] p-8 rounded-2xl border border-gray-800">
               <h3 className="text-2xl font-bold text-[#F9FAFB] mb-6">{t.about.summaryTitle}</h3>
               <div className="space-y-4 text-[#9CA3AF]">
                 <p>{t.about.summaryP1}</p>

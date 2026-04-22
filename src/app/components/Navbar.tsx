@@ -164,27 +164,29 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
             className="md:hidden bg-[#111827] border-t border-gray-800"
           >
             <div className="px-4 py-4 space-y-3">
-              <button
-                type="button"
-                onClick={toggleTheme}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-                aria-label={theme === 'dark' ? t.theme.switchToLight : t.theme.switchToDark}
-              >
-                {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
-                <span>{theme === 'dark' ? t.theme.dark : t.theme.light}</span>
-              </button>
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={toggleTheme}
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+                  aria-label={theme === 'dark' ? t.theme.switchToLight : t.theme.switchToDark}
+                >
+                  {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
+                  <span>{theme === 'dark' ? t.theme.dark : t.theme.light}</span>
+                </button>
 
-              <button
-                type="button"
-                onClick={() => setIsLanguageMenuOpen((currentValue) => !currentValue)}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-                aria-haspopup="true"
-                aria-expanded={isLanguageMenuOpen}
-                aria-label={t.language.label}
-              >
-                <Languages size={16} />
-                <span>{languageOptions.find((option) => option.value === language)?.label}</span>
-              </button>
+                <button
+                  type="button"
+                  onClick={() => setIsLanguageMenuOpen((currentValue) => !currentValue)}
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+                  aria-haspopup="true"
+                  aria-expanded={isLanguageMenuOpen}
+                  aria-label={t.language.label}
+                >
+                  <Languages size={16} />
+                  <span>{languageOptions.find((option) => option.value === language)?.label}</span>
+                </button>
+              </div>
 
               <AnimatePresence>
                 {isLanguageMenuOpen && (
