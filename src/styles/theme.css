@@ -182,23 +182,23 @@
 
 /* Light theme overrides for components that use fixed Tailwind arbitrary colors. */
 html[data-theme='light'] .bg-\[\#0F172A\] {
-  background-color: #f8fafc !important;
+  background-color: #e8f5e9 !important;
 }
 
 html[data-theme='light'] .bg-\[\#0F172A\]\/95 {
-  background-color: rgba(248, 250, 252, 0.95) !important;
+  background-color: rgba(232, 245, 233, 0.95) !important;
 }
 
 html[data-theme='light'] .bg-\[\#111827\] {
-  background-color: #ffffff !important;
+  background-color: #f3fbf3 !important;
 }
 
 html[data-theme='light'] .bg-gray-900 {
-  background-color: #e2e8f0 !important;
+  background-color: #dcedd8 !important;
 }
 
 html[data-theme='light'] .bg-gray-800 {
-  background-color: #cbd5e1 !important;
+  background-color: #c7ddc9 !important;
 }
 
 html[data-theme='light'] .text-\[\#F9FAFB\] {
@@ -212,5 +212,5 @@ html[data-theme='light'] .text-\[\#CBD5E1\] {
 
 html[data-theme='light'] .border-gray-800,
 html[data-theme='light'] .border-gray-700 {
-  border-color: #cbd5e1 !important;
+  border-color: #b7d3bb !important;
 }
