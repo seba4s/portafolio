@@ -193,6 +193,10 @@ html[data-theme='light'] .bg-\[\#111827\] {
   background-color: #f3fbf3 !important;
 }
 
+html[data-theme='light'] .bg-\[\#0B1222\] {
+  background-color: #eef8ef !important;
+}
+
 html[data-theme='light'] .bg-gray-900 {
   background-color: #dcedd8 !important;
 }
@@ -208,6 +212,20 @@ html[data-theme='light'] .text-\[\#F9FAFB\] {
 html[data-theme='light'] .text-\[\#9CA3AF\],
 html[data-theme='light'] .text-\[\#CBD5E1\] {
   color: #475569 !important;
+}
+
+html[data-theme='light'] .from-\[\#111827\] {
+  --tw-gradient-from: #eef8ef var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(238 248 239 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html[data-theme='light'] .to-\[\#0F172A\] {
+  --tw-gradient-to: #dff0e0 var(--tw-gradient-to-position) !important;
+}
+
+html[data-theme='light'] .ring-\[\#0F172A\] {
+  --tw-ring-color: #d7ead9 !important;
 }
 
 html[data-theme='light'] .border-gray-800,
