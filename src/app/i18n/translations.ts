@@ -125,6 +125,7 @@ export const translations = {
       madeWith: 'Hecho con',
       by: 'por',
       rights: 'Todos los derechos reservados',
+      downloadCv: 'Descargar CV',
     },
   },
   en: {
@@ -251,6 +252,7 @@ export const translations = {
       madeWith: 'Made with',
       by: 'by',
       rights: 'All rights reserved',
+      downloadCv: 'Download CV',
     },
   },
   pt: {
@@ -377,6 +379,7 @@ export const translations = {
       madeWith: 'Feito com',
       by: 'por',
       rights: 'Todos os direitos reservados',
+      downloadCv: 'Baixar CV',
     },
   },
   fr: {
@@ -503,6 +506,7 @@ export const translations = {
       madeWith: 'Fait avec',
       by: 'par',
       rights: 'Tous droits reserves',
+      downloadCv: 'Telecharger CV',
     },
   },
 };
