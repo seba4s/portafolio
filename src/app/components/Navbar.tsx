@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useTheme } from '../context/theme-context';
 
 // onePageScroll: si true, navega por scroll a secciones, si false usa react-router
 export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   // IDs para scroll y hrefs para router
   const navItems = [
@@ -71,6 +73,16 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
                 )}
               </motion.div>
             ))}
+
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+              aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+              <span>{theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -93,6 +105,16 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
             className="md:hidden bg-[#111827] border-t border-gray-800"
           >
             <div className="px-4 py-4 space-y-3">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+                aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+              >
+                {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+                <span>{theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+              </button>
+
               {navItems.map((item) => (
                 onePageScroll ? (
                   <a

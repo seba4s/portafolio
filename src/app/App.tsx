@@ -1,5 +1,10 @@
 import OnePage from './OnePage';
+import { ThemeProvider } from './context/theme-context';
 
 export default function App() {
-  return <OnePage />;
+  return (
+    <ThemeProvider>
+      <OnePage />
+    </ThemeProvider>
+  );
 }

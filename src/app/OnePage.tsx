@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { Toaster } from 'sonner';
 import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
+import { useTheme } from './context/theme-context';
 
 // Helper for scroll-into-view smooth
 const scrollToSection = (id: string) => {
@@ -19,6 +20,8 @@ const scrollToSection = (id: string) => {
 };
 
 function OnePage() {
+  const { theme } = useTheme();
+
   // Siempre ir al inicio al cargar/recargar la página y limpiar el hash de la URL
   useEffect(() => {
     history.scrollRestoration = 'manual';
@@ -56,8 +59,8 @@ function OnePage() {
         position="top-right" 
         toastOptions={{
           style: {
-            background: '#111827',
-            color: '#F9FAFB',
+            background: theme === 'dark' ? '#111827' : '#FFFFFF',
+            color: theme === 'dark' ? '#F9FAFB' : '#0F172A',
             border: '1px solid #22C55E',
           },
         }}
