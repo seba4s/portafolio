@@ -10,22 +10,22 @@ export function TestimonialsPage() {
   const testimonials = [
     {
       name: 'Miguel Angel Mendoza Jaramillo',
-      role: 'Compañero de equipo - Universidad',
-      testimonial: 'Tuve el placer de trabajar con Sebastian en el desarrollo de ONE GAME y otros proyectos universitarios. Su habilidad para resolver problemas complejos, su dedicación al código limpio y su capacidad de trabajo en equipo son excepcionales. Sebastian siempre aporta ideas innovadoras y se compromete al 100% con cada proyecto. Es un desarrollador talentoso y un excelente compañero de equipo.',
+      role: t.testimonials.role1,
+      testimonial: t.testimonials.text1,
       icon: User,
       color: 'text-[#22C55E]',
     },
     {
       name: 'Angela Liliana Benavides Castillo',
-      role: 'Jefa - Veterinaria Clinican',
-      testimonial: 'Sebastian se encargó de manera excepcional de la administración de nuestra base de datos y el desarrollo de la página principal de nuestra veterinaria Clinican. Su trabajo en el sistema de gestión de mascotas para el servicio de peluquería fue impecable, demostrando profesionalismo, responsabilidad y gran capacidad técnica. Es un desarrollador confiable y comprometido con la excelencia.',
+      role: t.testimonials.role2,
+      testimonial: t.testimonials.text2,
       icon: Briefcase,
       color: 'text-[#3B82F6]',
     },
     {
       name: 'Juan Pablo Gallardo Rojas',
-      role: 'Colaborador - Proyectos Universitarios',
-      testimonial: 'Colaborar con Sebastian en diversos proyectos universitarios ha sido una experiencia muy valiosa. Su profesionalismo, conocimiento técnico y habilidad para trabajar bajo presión lo destacan. Siempre está dispuesto a compartir su conocimiento y apoyar al equipo. Su enfoque metódico y atención al detalle garantizan resultados de alta calidad en cada proyecto.',
+      role: t.testimonials.role3,
+      testimonial: t.testimonials.text3,
       icon: Code,
       color: 'text-[#22C55E]',
     },

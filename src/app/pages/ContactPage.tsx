@@ -92,7 +92,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#F9FAFB] mb-1">{t.contact.location}</h3>
-                  <p className="text-[#9CA3AF] text-sm">Colombia</p>
+                  <p className="text-[#9CA3AF] text-sm">{t.contact.country}</p>
                 </div>
               </div>
             </Card>

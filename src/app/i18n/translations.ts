@@ -17,6 +17,12 @@ export const translations = {
       pt: 'Portugues',
       fr: 'Frances',
     },
+    theme: {
+      light: 'Claro',
+      dark: 'Oscuro',
+      switchToLight: 'Cambiar a modo claro',
+      switchToDark: 'Cambiar a modo oscuro',
+    },
     hero: {
       intro: 'Hola, soy',
       role: 'Estudiante de Ingenieria de Software | Desarrollador Full Stack',
@@ -39,6 +45,69 @@ export const translations = {
       contactAccent: 'me',
       contactSubtitle: 'Tienes un proyecto en mente? Conversemos sobre como puedo ayudarte',
     },
+    about: {
+      card1Title: 'Colaboracion efectiva',
+      card1Text:
+        'Orientado a la colaboracion efectiva y al fortalecimiento de la dinamica de equipo, con enfoque en la comunicacion clara y el trabajo conjunto para alcanzar objetivos comunes.',
+      card2Title: 'Crecimiento profesional',
+      card2Text:
+        'Motivado por integrar equipos de desarrollo para aplicar mis conocimientos y crecer profesionalmente en entornos desafiantes que impulsen mi desarrollo tecnico y personal.',
+      card3Title: 'Aprendizaje continuo',
+      card3Text:
+        'Comprometido con el aprendizaje continuo y la excelencia en el desarrollo de software, manteniendome actualizado con las ultimas tecnologias y mejores practicas del sector.',
+      summaryTitle: 'Mi enfoque',
+      summaryP1:
+        'Como estudiante de Ingenieria de Software y desarrollador Full Stack, me apasiona crear soluciones digitales innovadoras que combinen funcionalidad, diseno y experiencia de usuario.',
+      summaryP2:
+        'Mi formacion academica, combinada con proyectos practicos, me ha permitido desarrollar habilidades tecnicas solidas en desarrollo web moderno, desde el frontend hasta el backend, utilizando tecnologias como React, JavaScript, Python y bases de datos.',
+      summaryP3:
+        'Creo firmemente en la importancia del codigo limpio, las mejores practicas de desarrollo y el trabajo en equipo. Mi objetivo es contribuir a proyectos significativos donde pueda aplicar mis conocimientos, aprender de profesionales experimentados y seguir evolucionando como desarrollador.',
+      summaryP4:
+        'La disciplina, la curiosidad tecnica y el compromiso con la excelencia son los pilares que guian mi desarrollo profesional en el ecosistema tecnologico.',
+    },
+    projects: {
+      oneGameDescription:
+        'Es una replica completa y fiel del clasico juego de cartas UNO, desarrollada con Next.js 15, TypeScript y Tailwind CSS. Incluye soporte para 2-4 jugadores (con IA para bots), todas las cartas especiales (+2, +4, Saltar, Invertir y Comodin), animaciones 3D suaves y un diseno visual espectacular con efecto glassmorphism y fondo galactico.',
+      featured: 'Destacado',
+      typeLabel: 'Proyecto Full Stack',
+      viewCode: 'Ver codigo',
+      viewDemo: 'Ver demo',
+      aiTag: 'IA',
+    },
+    experience: {
+      timelineTitle: 'Trayectoria',
+      stackTitle: 'Stack tecnologico',
+      stackIntro: 'Dominio de tecnologias modernas para el desarrollo de aplicaciones web completas y escalables.',
+      groupFrontend: 'Frontend',
+      groupBackendData: 'Backend y datos',
+      groupTools: 'Herramientas',
+      timeline1Title: 'Ingenieria de Software',
+      timeline1Org: 'Universidad',
+      timeline1Period: '2022 - Presente',
+      timeline1Description: 'Formacion academica en desarrollo de software, algoritmos, estructuras de datos y arquitectura de sistemas.',
+      timeline2Title: 'Desarrollador Frontend',
+      timeline2Org: 'Proyecto academico',
+      timeline2Period: '2024',
+      timeline2Description: 'Desarrollo de interfaces de usuario modernas utilizando React y Tailwind CSS para proyectos universitarios.',
+      timeline3Title: 'Desarrollador Full Stack',
+      timeline3Org: 'Freelance',
+      timeline3Period: '2023 - 2024',
+      timeline3Description: 'Desarrollo de aplicaciones web completas para clientes locales, desde la concepcion hasta el despliegue.',
+      skillFrontend: 'Desarrollo frontend',
+      skillBackend: 'Desarrollo backend',
+      skillDatabase: 'Gestion de bases de datos',
+    },
+    testimonials: {
+      role1: 'Companero de equipo - Universidad',
+      text1:
+        'Tuve el placer de trabajar con Sebastian en el desarrollo de ONE GAME y otros proyectos universitarios. Su habilidad para resolver problemas complejos, su dedicacion al codigo limpio y su capacidad de trabajo en equipo son excepcionales. Sebastian siempre aporta ideas innovadoras y se compromete al 100% con cada proyecto. Es un desarrollador talentoso y un excelente companero de equipo.',
+      role2: 'Jefa - Veterinaria Clinican',
+      text2:
+        'Sebastian se encargo de manera excepcional de la administracion de nuestra base de datos y el desarrollo de la pagina principal de nuestra veterinaria Clinican. Su trabajo en el sistema de gestion de mascotas para el servicio de peluqueria fue impecable, demostrando profesionalismo, responsabilidad y gran capacidad tecnica. Es un desarrollador confiable y comprometido con la excelencia.',
+      role3: 'Colaborador - Proyectos universitarios',
+      text3:
+        'Colaborar con Sebastian en diversos proyectos universitarios ha sido una experiencia muy valiosa. Su profesionalismo, conocimiento tecnico y habilidad para trabajar bajo presion lo destacan. Siempre esta dispuesto a compartir su conocimiento y apoyar al equipo. Su enfoque metodico y atencion al detalle garantizan resultados de alta calidad en cada proyecto.',
+    },
     contact: {
       name: 'Nombre',
       namePlaceholder: 'Tu nombre',
@@ -49,6 +118,7 @@ export const translations = {
       send: 'Enviar mensaje',
       location: 'Ubicacion',
       phone: 'Telefono',
+      country: 'Colombia',
       success: 'Mensaje enviado correctamente! Te contactare pronto.',
     },
     footer: {
@@ -73,6 +143,12 @@ export const translations = {
       pt: 'Portuguese',
       fr: 'French',
     },
+    theme: {
+      light: 'Light',
+      dark: 'Dark',
+      switchToLight: 'Switch to light mode',
+      switchToDark: 'Switch to dark mode',
+    },
     hero: {
       intro: 'Hi, I am',
       role: 'Software Engineering Student | Full Stack Developer',
@@ -95,6 +171,69 @@ export const translations = {
       contactAccent: 'me',
       contactSubtitle: 'Do you have a project in mind? Let us talk about how I can help you',
     },
+    about: {
+      card1Title: 'Effective collaboration',
+      card1Text:
+        'Focused on effective collaboration and stronger team dynamics, with clear communication and joint work to achieve shared goals.',
+      card2Title: 'Professional growth',
+      card2Text:
+        'Motivated to join development teams, apply my knowledge, and grow professionally in challenging environments that strengthen my technical and personal development.',
+      card3Title: 'Continuous learning',
+      card3Text:
+        'Committed to continuous learning and excellence in software development, staying current with modern technologies and industry best practices.',
+      summaryTitle: 'My approach',
+      summaryP1:
+        'As a Software Engineering student and Full Stack developer, I am passionate about building innovative digital solutions that combine functionality, design, and user experience.',
+      summaryP2:
+        'My academic background, combined with practical projects, has helped me build solid technical skills in modern web development, from frontend to backend, using technologies such as React, JavaScript, Python, and databases.',
+      summaryP3:
+        'I strongly believe in clean code, development best practices, and teamwork. My goal is to contribute to meaningful projects where I can apply my knowledge, learn from experienced professionals, and continue evolving as a developer.',
+      summaryP4:
+        'Discipline, technical curiosity, and commitment to excellence are the pillars that guide my professional growth in the technology ecosystem.',
+    },
+    projects: {
+      oneGameDescription:
+        'A complete and faithful recreation of the classic UNO card game, built with Next.js 15, TypeScript, and Tailwind CSS. It includes support for 2-4 players (with bot AI), all special cards (+2, +4, Skip, Reverse, and Wild), smooth 3D animations, and a striking visual design with a glassmorphism effect and galactic background.',
+      featured: 'Featured',
+      typeLabel: 'Full Stack Project',
+      viewCode: 'View code',
+      viewDemo: 'View demo',
+      aiTag: 'AI',
+    },
+    experience: {
+      timelineTitle: 'Journey',
+      stackTitle: 'Technology stack',
+      stackIntro: 'Strong command of modern technologies for building complete and scalable web applications.',
+      groupFrontend: 'Frontend',
+      groupBackendData: 'Backend and data',
+      groupTools: 'Tools',
+      timeline1Title: 'Software Engineering',
+      timeline1Org: 'University',
+      timeline1Period: '2022 - Present',
+      timeline1Description: 'Academic training in software development, algorithms, data structures, and systems architecture.',
+      timeline2Title: 'Frontend Developer',
+      timeline2Org: 'Academic project',
+      timeline2Period: '2024',
+      timeline2Description: 'Developed modern user interfaces with React and Tailwind CSS for university projects.',
+      timeline3Title: 'Full Stack Developer',
+      timeline3Org: 'Freelance',
+      timeline3Period: '2023 - 2024',
+      timeline3Description: 'Built complete web applications for local clients, from conception to deployment.',
+      skillFrontend: 'Frontend development',
+      skillBackend: 'Backend development',
+      skillDatabase: 'Database management',
+    },
+    testimonials: {
+      role1: 'Teammate - University',
+      text1:
+        'I had the pleasure of working with Sebastian on ONE GAME and other university projects. His ability to solve complex problems, dedication to clean code, and teamwork skills are exceptional. Sebastian consistently brings innovative ideas and gives 100% to every project. He is a talented developer and an excellent teammate.',
+      role2: 'Manager - Clinican Veterinary',
+      text2:
+        'Sebastian managed our database administration and developed our veterinary clinic main website with excellent results. His work on the pet management system for grooming services was outstanding, showing professionalism, responsibility, and strong technical skills. He is a reliable developer committed to excellence.',
+      role3: 'Collaborator - University projects',
+      text3:
+        'Working with Sebastian on university projects has been highly valuable. His professionalism, technical knowledge, and ability to work under pressure stand out. He is always willing to share knowledge and support the team. His methodical approach and attention to detail ensure high-quality results in every project.',
+    },
     contact: {
       name: 'Name',
       namePlaceholder: 'Your name',
@@ -105,6 +244,7 @@ export const translations = {
       send: 'Send message',
       location: 'Location',
       phone: 'Phone',
+      country: 'Colombia',
       success: 'Message sent successfully! I will contact you soon.',
     },
     footer: {
@@ -129,6 +269,12 @@ export const translations = {
       pt: 'Portugues',
       fr: 'Frances',
     },
+    theme: {
+      light: 'Claro',
+      dark: 'Escuro',
+      switchToLight: 'Mudar para modo claro',
+      switchToDark: 'Mudar para modo escuro',
+    },
     hero: {
       intro: 'Ola, eu sou',
       role: 'Estudante de Engenharia de Software | Desenvolvedor Full Stack',
@@ -151,6 +297,69 @@ export const translations = {
       contactAccent: 'me',
       contactSubtitle: 'Voce tem um projeto em mente? Vamos conversar sobre como posso ajudar',
     },
+    about: {
+      card1Title: 'Colaboracao eficaz',
+      card1Text:
+        'Orientado para colaboracao eficaz e fortalecimento da dinamica de equipe, com foco em comunicacao clara e trabalho conjunto para atingir objetivos comuns.',
+      card2Title: 'Crescimento profissional',
+      card2Text:
+        'Motivado para integrar equipes de desenvolvimento, aplicar meus conhecimentos e crescer profissionalmente em ambientes desafiadores que impulsionem meu desenvolvimento tecnico e pessoal.',
+      card3Title: 'Aprendizado continuo',
+      card3Text:
+        'Comprometido com aprendizado continuo e excelencia no desenvolvimento de software, mantendo-me atualizado com tecnologias modernas e melhores praticas do setor.',
+      summaryTitle: 'Minha abordagem',
+      summaryP1:
+        'Como estudante de Engenharia de Software e desenvolvedor Full Stack, sou apaixonado por criar solucoes digitais inovadoras que combinem funcionalidade, design e experiencia do usuario.',
+      summaryP2:
+        'Minha formacao academica, combinada com projetos praticos, permitiu desenvolver habilidades tecnicas solidas em desenvolvimento web moderno, do frontend ao backend, usando tecnologias como React, JavaScript, Python e bancos de dados.',
+      summaryP3:
+        'Acredito fortemente na importancia de codigo limpo, melhores praticas de desenvolvimento e trabalho em equipe. Meu objetivo e contribuir em projetos relevantes onde eu possa aplicar meus conhecimentos, aprender com profissionais experientes e continuar evoluindo como desenvolvedor.',
+      summaryP4:
+        'Disciplina, curiosidade tecnica e compromisso com a excelencia sao os pilares que orientam meu desenvolvimento profissional no ecossistema tecnologico.',
+    },
+    projects: {
+      oneGameDescription:
+        'Uma replica completa e fiel do classico jogo de cartas UNO, desenvolvida com Next.js 15, TypeScript e Tailwind CSS. Inclui suporte para 2-4 jogadores (com IA para bots), todas as cartas especiais (+2, +4, Pular, Inverter e Coringa), animacoes 3D suaves e um design visual marcante com efeito glassmorphism e fundo galactico.',
+      featured: 'Destaque',
+      typeLabel: 'Projeto Full Stack',
+      viewCode: 'Ver codigo',
+      viewDemo: 'Ver demo',
+      aiTag: 'IA',
+    },
+    experience: {
+      timelineTitle: 'Trajetoria',
+      stackTitle: 'Stack tecnologico',
+      stackIntro: 'Dominio de tecnologias modernas para desenvolver aplicacoes web completas e escalaveis.',
+      groupFrontend: 'Frontend',
+      groupBackendData: 'Backend e dados',
+      groupTools: 'Ferramentas',
+      timeline1Title: 'Engenharia de Software',
+      timeline1Org: 'Universidade',
+      timeline1Period: '2022 - Presente',
+      timeline1Description: 'Formacao academica em desenvolvimento de software, algoritmos, estruturas de dados e arquitetura de sistemas.',
+      timeline2Title: 'Desenvolvedor Frontend',
+      timeline2Org: 'Projeto academico',
+      timeline2Period: '2024',
+      timeline2Description: 'Desenvolvimento de interfaces modernas usando React e Tailwind CSS para projetos universitarios.',
+      timeline3Title: 'Desenvolvedor Full Stack',
+      timeline3Org: 'Freelance',
+      timeline3Period: '2023 - 2024',
+      timeline3Description: 'Desenvolvimento de aplicacoes web completas para clientes locais, da concepcao ao deploy.',
+      skillFrontend: 'Desenvolvimento frontend',
+      skillBackend: 'Desenvolvimento backend',
+      skillDatabase: 'Gestao de banco de dados',
+    },
+    testimonials: {
+      role1: 'Colega de equipe - Universidade',
+      text1:
+        'Tive o prazer de trabalhar com Sebastian no desenvolvimento do ONE GAME e em outros projetos universitarios. Sua habilidade para resolver problemas complexos, dedicacao a codigo limpo e capacidade de trabalho em equipe sao excepcionais. Sebastian sempre traz ideias inovadoras e se compromete 100% com cada projeto. E um desenvolvedor talentoso e um excelente colega.',
+      role2: 'Gestora - Veterinaria Clinican',
+      text2:
+        'Sebastian cuidou de forma exemplar da administracao do nosso banco de dados e do desenvolvimento do site principal da nossa clinica veterinaria. Seu trabalho no sistema de gestao de pets para o servico de banho e tosa foi impecavel, demonstrando profissionalismo, responsabilidade e grande capacidade tecnica. E um desenvolvedor confiavel e comprometido com a excelencia.',
+      role3: 'Colaborador - Projetos universitarios',
+      text3:
+        'Colaborar com Sebastian em diversos projetos universitarios foi uma experiencia muito valiosa. Seu profissionalismo, conhecimento tecnico e habilidade para trabalhar sob pressao se destacam. Ele esta sempre disposto a compartilhar conhecimento e apoiar a equipe. Sua abordagem metodica e atencao aos detalhes garantem resultados de alta qualidade em cada projeto.',
+    },
     contact: {
       name: 'Nome',
       namePlaceholder: 'Seu nome',
@@ -161,6 +370,7 @@ export const translations = {
       send: 'Enviar mensagem',
       location: 'Localizacao',
       phone: 'Telefone',
+      country: 'Colombia',
       success: 'Mensagem enviada com sucesso! Entrarei em contato em breve.',
     },
     footer: {
@@ -185,6 +395,12 @@ export const translations = {
       pt: 'Portugais',
       fr: 'Francais',
     },
+    theme: {
+      light: 'Clair',
+      dark: 'Sombre',
+      switchToLight: 'Passer au mode clair',
+      switchToDark: 'Passer au mode sombre',
+    },
     hero: {
       intro: 'Bonjour, je suis',
       role: 'Etudiant en ingenierie logicielle | Developpeur Full Stack',
@@ -207,6 +423,69 @@ export const translations = {
       contactAccent: 'moi',
       contactSubtitle: 'Vous avez un projet en tete? Parlons de la facon dont je peux vous aider',
     },
+    about: {
+      card1Title: 'Collaboration efficace',
+      card1Text:
+        'Oriente vers une collaboration efficace et le renforcement de la dynamique d equipe, avec une communication claire et un travail collectif pour atteindre des objectifs communs.',
+      card2Title: 'Croissance professionnelle',
+      card2Text:
+        'Motive pour integrer des equipes de developpement, appliquer mes connaissances et progresser professionnellement dans des environnements exigeants qui renforcent mon evolution technique et personnelle.',
+      card3Title: 'Apprentissage continu',
+      card3Text:
+        'Engage dans l apprentissage continu et l excellence en developpement logiciel, en restant a jour avec les technologies modernes et les meilleures pratiques du secteur.',
+      summaryTitle: 'Mon approche',
+      summaryP1:
+        'En tant qu etudiant en ingenierie logicielle et developpeur Full Stack, je suis passionne par la creation de solutions numeriques innovantes qui combinent fonctionnalite, design et experience utilisateur.',
+      summaryP2:
+        'Ma formation academique, combinee a des projets pratiques, m a permis de developper de solides competences techniques en developpement web moderne, du frontend au backend, avec des technologies comme React, JavaScript, Python et les bases de donnees.',
+      summaryP3:
+        'Je crois fermement a l importance du code propre, des bonnes pratiques de developpement et du travail en equipe. Mon objectif est de contribuer a des projets significatifs ou je peux appliquer mes connaissances, apprendre de professionnels experimentes et continuer a evoluer comme developpeur.',
+      summaryP4:
+        'La discipline, la curiosite technique et l engagement vers l excellence sont les piliers qui guident mon developpement professionnel dans l ecosysteme technologique.',
+    },
+    projects: {
+      oneGameDescription:
+        'Une recreation complete et fidele du jeu de cartes UNO classique, developpee avec Next.js 15, TypeScript et Tailwind CSS. Elle inclut un support pour 2-4 joueurs (avec IA pour les bots), toutes les cartes speciales (+2, +4, Passer, Inverser et Joker), des animations 3D fluides et un design visuel marquant avec effet glassmorphism et fond galactique.',
+      featured: 'En vedette',
+      typeLabel: 'Projet Full Stack',
+      viewCode: 'Voir le code',
+      viewDemo: 'Voir la demo',
+      aiTag: 'IA',
+    },
+    experience: {
+      timelineTitle: 'Parcours',
+      stackTitle: 'Stack technologique',
+      stackIntro: 'Maitrise des technologies modernes pour developper des applications web completes et evolutives.',
+      groupFrontend: 'Frontend',
+      groupBackendData: 'Backend et donnees',
+      groupTools: 'Outils',
+      timeline1Title: 'Ingenierie logicielle',
+      timeline1Org: 'Universite',
+      timeline1Period: '2022 - Present',
+      timeline1Description: 'Formation academique en developpement logiciel, algorithmes, structures de donnees et architecture des systemes.',
+      timeline2Title: 'Developpeur Frontend',
+      timeline2Org: 'Projet academique',
+      timeline2Period: '2024',
+      timeline2Description: 'Developpement d interfaces modernes avec React et Tailwind CSS pour des projets universitaires.',
+      timeline3Title: 'Developpeur Full Stack',
+      timeline3Org: 'Freelance',
+      timeline3Period: '2023 - 2024',
+      timeline3Description: 'Developpement d applications web completes pour des clients locaux, de la conception au deploiement.',
+      skillFrontend: 'Developpement frontend',
+      skillBackend: 'Developpement backend',
+      skillDatabase: 'Gestion de base de donnees',
+    },
+    testimonials: {
+      role1: 'Coequipier - Universite',
+      text1:
+        'J ai eu le plaisir de travailler avec Sebastian sur ONE GAME et d autres projets universitaires. Sa capacite a resoudre des problemes complexes, son engagement envers un code propre et son esprit d equipe sont exceptionnels. Sebastian apporte toujours des idees innovantes et s investit a 100% dans chaque projet. C est un developpeur talentueux et un excellent coequipier.',
+      role2: 'Responsable - Clinique veterinaire Clinican',
+      text2:
+        'Sebastian a gere de facon exemplaire l administration de notre base de donnees ainsi que le developpement du site principal de notre clinique veterinaire. Son travail sur le systeme de gestion des animaux pour le service de toilettage a ete impeccable, montrant professionnalisme, responsabilite et forte competence technique. C est un developpeur fiable et engage envers l excellence.',
+      role3: 'Collaborateur - Projets universitaires',
+      text3:
+        'Collaborer avec Sebastian sur differents projets universitaires a ete tres enrichissant. Son professionnalisme, ses connaissances techniques et sa capacite a travailler sous pression se distinguent. Il est toujours pret a partager ses connaissances et soutenir l equipe. Son approche methodique et son attention au detail garantissent des resultats de haute qualite dans chaque projet.',
+    },
     contact: {
       name: 'Nom',
       namePlaceholder: 'Votre nom',
@@ -217,6 +496,7 @@ export const translations = {
       send: 'Envoyer le message',
       location: 'Localisation',
       phone: 'Telephone',
+      country: 'Colombie',
       success: 'Message envoye avec succes! Je vous contacterai bientot.',
     },
     footer: {

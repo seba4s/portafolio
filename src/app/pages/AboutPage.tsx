@@ -53,10 +53,9 @@ export function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">Colaboración efectiva</h3>
+                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">{t.about.card1Title}</h3>
                   <p className="text-[#9CA3AF]">
-                    Orientado a la colaboración efectiva y al fortalecimiento de la dinámica de equipo, 
-                    con enfoque en la comunicación clara y el trabajo conjunto para alcanzar objetivos comunes.
+                    {t.about.card1Text}
                   </p>
                 </div>
               </div>
@@ -70,10 +69,9 @@ export function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">Crecimiento profesional</h3>
+                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">{t.about.card2Title}</h3>
                   <p className="text-[#9CA3AF]">
-                    Motivado por integrar equipos de desarrollo para aplicar mis conocimientos y crecer 
-                    profesionalmente en entornos desafiantes que impulsen mi desarrollo técnico y personal.
+                    {t.about.card2Text}
                   </p>
                 </div>
               </div>
@@ -87,10 +85,9 @@ export function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">Aprendizaje continuo</h3>
+                  <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">{t.about.card3Title}</h3>
                   <p className="text-[#9CA3AF]">
-                    Comprometido con el aprendizaje continuo y la excelencia en el desarrollo de software, 
-                    manteniéndome actualizado con las últimas tecnologías y mejores prácticas del sector.
+                    {t.about.card3Text}
                   </p>
                 </div>
               </div>
@@ -106,27 +103,12 @@ export function AboutPage() {
           >
             {/* Summary */}
             <div className="bg-gradient-to-br from-[#111827] to-[#0F172A] p-8 rounded-2xl border border-gray-800">
-              <h3 className="text-2xl font-bold text-[#F9FAFB] mb-6">Mi enfoque</h3>
+              <h3 className="text-2xl font-bold text-[#F9FAFB] mb-6">{t.about.summaryTitle}</h3>
               <div className="space-y-4 text-[#9CA3AF]">
-                <p>
-                  Como estudiante de Ingeniería de Software y desarrollador Full Stack, me apasiona crear 
-                  soluciones digitales innovadoras que combinen funcionalidad, diseño y experiencia de usuario.
-                </p>
-                <p>
-                  Mi formación académica, combinada con proyectos prácticos, me ha permitido desarrollar 
-                  habilidades técnicas sólidas en desarrollo web moderno, desde el frontend hasta el backend, 
-                  utilizando tecnologías como React, JavaScript, Python y bases de datos.
-                </p>
-                <p>
-                  Creo firmemente en la importancia del código limpio, las mejores prácticas de desarrollo 
-                  y el trabajo en equipo. Mi objetivo es contribuir a proyectos significativos donde pueda 
-                  aplicar mis conocimientos, aprender de profesionales experimentados y seguir evolucionando 
-                  como desarrollador.
-                </p>
-                <p>
-                  La disciplina, la curiosidad técnica y el compromiso con la excelencia son los pilares 
-                  que guían mi desarrollo profesional en el ecosistema tecnológico.
-                </p>
+                <p>{t.about.summaryP1}</p>
+                <p>{t.about.summaryP2}</p>
+                <p>{t.about.summaryP3}</p>
+                <p>{t.about.summaryP4}</p>
               </div>
             </div>
           </motion.div>

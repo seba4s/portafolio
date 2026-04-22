@@ -12,9 +12,9 @@ export function ProjectsPage() {
   const projects = [
     {
       title: 'ONE GAME',
-      description: 'Es una réplica completa y fiel del clásico juego de cartas UNO, desarrollada con Next.js 15, TypeScript y Tailwind CSS. Incluye soporte para 2-4 jugadores (con IA para bots), todas las cartas especiales (+2, +4, Saltar, Invertir y Comodín), animaciones 3D suaves y un diseño visual espectacular con efecto glassmorphism y fondo galáctico.',
+      description: t.projects.oneGameDescription,
       image: oneGameImage,
-      tags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'IA'],
+      tags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', t.projects.aiTag],
       github: 'https://github.com/seba4s/ONE-GAME.git',
       demo: 'https://one-game-iota.vercel.app/',
       featured: true,
@@ -58,14 +58,14 @@ export function ProjectsPage() {
                     />
                     {project.featured && (
                       <div className="absolute top-3 right-3 bg-[#22C55E] text-[#0F172A] px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">
-                        Destacado
+                        {t.projects.featured}
                       </div>
                     )}
                   </div>
 
                   <div className="space-y-5">
                     <div className="space-y-2">
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#3B82F6]">Proyecto Full Stack</p>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#3B82F6]">{t.projects.typeLabel}</p>
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#F9FAFB]">{project.title}</h3>
                     </div>
 
@@ -87,7 +87,7 @@ export function ProjectsPage() {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-[#F9FAFB] hover:border-[#22C55E] hover:text-[#22C55E] transition-colors duration-300"
                       >
                         <Github size={18} />
-                        <span className="text-sm font-medium">Ver código</span>
+                        <span className="text-sm font-medium">{t.projects.viewCode}</span>
                       </a>
                       <a
                         href={project.demo}
@@ -96,7 +96,7 @@ export function ProjectsPage() {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#22C55E] text-[#0F172A] hover:bg-[#4ADE80] transition-colors duration-300"
                       >
                         <ExternalLink size={18} />
-                        <span className="text-sm font-semibold">Ver demo</span>
+                        <span className="text-sm font-semibold">{t.projects.viewDemo}</span>
                       </a>
                     </div>
                   </div>

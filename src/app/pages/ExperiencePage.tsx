@@ -10,15 +10,15 @@ export function ExperiencePage() {
 
   const techGroups = [
     {
-      title: 'Frontend',
+      title: t.experience.groupFrontend,
       items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind'],
     },
     {
-      title: 'Backend & Datos',
+      title: t.experience.groupBackendData,
       items: ['Node.js', 'Java', 'Python', 'SQL', 'MongoDB'],
     },
     {
-      title: 'Herramientas',
+      title: t.experience.groupTools,
       items: ['GitHub'],
     },
   ];
@@ -26,24 +26,24 @@ export function ExperiencePage() {
   const timeline = [
     {
       type: 'education',
-      title: 'Ingeniería de Software',
-      organization: 'Universidad',
-      period: '2022 - Presente',
-      description: 'Formación académica en desarrollo de software, algoritmos, estructuras de datos y arquitectura de sistemas.',
+      title: t.experience.timeline1Title,
+      organization: t.experience.timeline1Org,
+      period: t.experience.timeline1Period,
+      description: t.experience.timeline1Description,
     },
     {
       type: 'work',
-      title: 'Desarrollador Frontend',
-      organization: 'Proyecto Académico',
-      period: '2024',
-      description: 'Desarrollo de interfaces de usuario modernas utilizando React y Tailwind CSS para proyectos universitarios.',
+      title: t.experience.timeline2Title,
+      organization: t.experience.timeline2Org,
+      period: t.experience.timeline2Period,
+      description: t.experience.timeline2Description,
     },
     {
       type: 'work',
-      title: 'Desarrollador Full Stack',
-      organization: 'Freelance',
-      period: '2023 - 2024',
-      description: 'Desarrollo de aplicaciones web completas para clientes locales, desde la concepción hasta el despliegue.',
+      title: t.experience.timeline3Title,
+      organization: t.experience.timeline3Org,
+      period: t.experience.timeline3Period,
+      description: t.experience.timeline3Description,
     },
   ];
 
@@ -66,7 +66,7 @@ export function ExperiencePage() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
           {/* Timeline */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">Trayectoria</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">{t.experience.timelineTitle}</h3>
             <div className="relative space-y-6 pl-4 sm:pl-0">
               <div className="absolute left-10 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#3B82F6]/60 via-[#22C55E]/60 to-transparent" />
               {timeline.map((item, index) => (
@@ -116,7 +116,7 @@ export function ExperiencePage() {
 
           {/* Technologies */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">Stack Tecnológico</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F9FAFB] mb-6 sm:mb-8">{t.experience.stackTitle}</h3>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ export function ExperiencePage() {
               <Card hover={false} className="h-full">
                 <div className="space-y-6">
                   <p className="text-[#9CA3AF]">
-                    Dominio de tecnologías modernas para el desarrollo de aplicaciones web completas y escalables.
+                    {t.experience.stackIntro}
                   </p>
                   
                   <div className="space-y-4">
@@ -154,7 +154,7 @@ export function ExperiencePage() {
                   <div className="pt-6 border-t border-gray-800 space-y-4">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">Frontend Development</span>
+                        <span className="text-[#F9FAFB]">{t.experience.skillFrontend}</span>
                         <span className="text-[#22C55E]">90%</span>
                       </div>
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -170,7 +170,7 @@ export function ExperiencePage() {
 
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">Backend Development</span>
+                        <span className="text-[#F9FAFB]">{t.experience.skillBackend}</span>
                         <span className="text-[#3B82F6]">85%</span>
                       </div>
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -186,7 +186,7 @@ export function ExperiencePage() {
 
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-[#F9FAFB]">Database Management</span>
+                        <span className="text-[#F9FAFB]">{t.experience.skillDatabase}</span>
                         <span className="text-[#22C55E]">80%</span>
                       </div>
                       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">

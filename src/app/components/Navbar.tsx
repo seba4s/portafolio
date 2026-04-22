@@ -85,10 +85,10 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
               type="button"
               onClick={toggleTheme}
               className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={theme === 'dark' ? t.theme.switchToLight : t.theme.switchToDark}
             >
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-              <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+              <span>{theme === 'dark' ? t.theme.light : t.theme.dark}</span>
             </button>
 
             <div className="relative">
@@ -162,10 +162,10 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
                 type="button"
                 onClick={toggleTheme}
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                aria-label={theme === 'dark' ? t.theme.switchToLight : t.theme.switchToDark}
               >
                 {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-                <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+                <span>{theme === 'dark' ? t.theme.light : t.theme.dark}</span>
               </button>
 
               <button
