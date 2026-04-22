@@ -1,21 +1,33 @@
 import { useState } from 'react';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Languages, Menu, Moon, Sun, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from '../context/theme-context';
+import { Language, useLanguage } from '../context/language-context';
+import { useTranslations } from '../i18n/translations';
 
 // onePageScroll: si true, navega por scroll a secciones, si false usa react-router
 export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage } = useLanguage();
+  const t = useTranslations();
+
+  const languageOptions: Array<{ value: Language; label: string }> = [
+    { value: 'es', label: t.language.es },
+    { value: 'en', label: t.language.en },
+    { value: 'pt', label: t.language.pt },
+    { value: 'fr', label: t.language.fr },
+  ];
 
   // IDs para scroll y hrefs para router
   const navItems = [
-    { label: 'Inicio', href: onePageScroll ? '#inicio' : '/' },
-    { label: 'Sobre mí', href: onePageScroll ? '#sobre-mi' : '/sobre-mi' },
-    { label: 'Proyectos', href: onePageScroll ? '#proyectos' : '/proyectos' },
-    { label: 'Experiencia', href: onePageScroll ? '#experiencia' : '/experiencia' },
-    { label: 'Testimonios', href: onePageScroll ? '#testimonios' : '/testimonios' },
-    { label: 'Contacto', href: onePageScroll ? '#contacto' : '/contacto' },
+    { label: t.nav.home, href: onePageScroll ? '#inicio' : '/' },
+    { label: t.nav.about, href: onePageScroll ? '#sobre-mi' : '/sobre-mi' },
+    { label: t.nav.projects, href: onePageScroll ? '#proyectos' : '/proyectos' },
+    { label: t.nav.experience, href: onePageScroll ? '#experiencia' : '/experiencia' },
+    { label: t.nav.testimonials, href: onePageScroll ? '#testimonios' : '/testimonios' },
+    { label: t.nav.contact, href: onePageScroll ? '#contacto' : '/contacto' },
   ];
 
   // Scroll suave a sección
@@ -27,12 +39,10 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
         setIsOpen(false);
+        setIsLanguageMenuOpen(false);
       }
     }
   };
-
-  // No hay rutas activas en modo onePageScroll
-  const isActive = (_: string) => false;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-gray-800">
@@ -49,45 +59,88 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                {onePageScroll ? (
-                  <a
-                    href={item.href}
-                    onClick={e => handleNavClick(e, item.href)}
-                    className={
-                      'transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]'
-                    }
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  // ...existing code for router mode...
-                  null
-                )}
-              </motion.div>
-            ))}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-8">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  {onePageScroll ? (
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.href)}
+                      className="transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]"
+                    >
+                      {item.label}
+                    </a>
+                  ) : null}
+                </motion.div>
+              ))}
+            </div>
 
             <button
               type="button"
               onClick={toggleTheme}
               className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-              aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-              <span>{theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+              <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
             </button>
+
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsLanguageMenuOpen((currentValue) => !currentValue)}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+                aria-haspopup="true"
+                aria-expanded={isLanguageMenuOpen}
+                aria-label={t.language.label}
+              >
+                <Languages size={16} />
+                <span>{languageOptions.find((option) => option.value === language)?.label}</span>
+              </button>
+
+              <AnimatePresence>
+                {isLanguageMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    className="absolute right-0 mt-2 min-w-40 rounded-lg border border-gray-700 bg-[#111827] p-2 shadow-2xl"
+                  >
+                    {languageOptions.map((option) => (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={() => {
+                          setLanguage(option.value);
+                          setIsLanguageMenuOpen(false);
+                        }}
+                        className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                          language === option.value
+                            ? 'bg-[#22C55E]/15 text-[#22C55E]'
+                            : 'text-[#F9FAFB] hover:bg-[#22C55E]/10 hover:text-[#22C55E]'
+                        }`}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              setIsLanguageMenuOpen(false);
+            }}
             className="md:hidden text-[#F9FAFB] p-2"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -109,28 +162,69 @@ export function Navbar({ onePageScroll = false }: { onePageScroll?: boolean }) {
                 type="button"
                 onClick={toggleTheme}
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
-                aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               >
                 {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-                <span>{theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+                <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
               </button>
+
+              <button
+                type="button"
+                onClick={() => setIsLanguageMenuOpen((currentValue) => !currentValue)}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 bg-[#111827] px-3 py-2 text-sm text-[#F9FAFB] transition-colors hover:border-[#22C55E] hover:text-[#22C55E]"
+                aria-haspopup="true"
+                aria-expanded={isLanguageMenuOpen}
+                aria-label={t.language.label}
+              >
+                <Languages size={16} />
+                <span>{languageOptions.find((option) => option.value === language)?.label}</span>
+              </button>
+
+              <AnimatePresence>
+                {isLanguageMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    className="rounded-lg border border-gray-700 bg-[#0F172A] p-2"
+                  >
+                    {languageOptions.map((option) => (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={() => {
+                          setLanguage(option.value);
+                          setIsLanguageMenuOpen(false);
+                        }}
+                        className={`block w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                          language === option.value
+                            ? 'bg-[#22C55E]/15 text-[#22C55E]'
+                            : 'text-[#F9FAFB] hover:bg-[#22C55E]/10 hover:text-[#22C55E]'
+                        }`}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {navItems.map((item) => (
                 onePageScroll ? (
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={e => {
-                      // Scroll suave y cerrar menú
+                    onClick={(e) => {
                       e.preventDefault();
                       const id = item.href.replace('#', '');
                       const el = document.getElementById(id);
                       if (el) {
                         el.scrollIntoView({ behavior: 'smooth' });
                         setIsOpen(false);
+                        setIsLanguageMenuOpen(false);
                       }
                     }}
-                    className={'block w-full text-left py-2 transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]'}
+                    className="block w-full text-left py-2 transition-colors duration-300 text-[#9CA3AF] hover:text-[#22C55E]"
                   >
                     {item.label}
                   </a>

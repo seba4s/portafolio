@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { useTranslations } from '../i18n/translations';
 
 export function Footer() {
+  const t = useTranslations();
+
   return (
     <footer className="bg-[#0F172A] border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -9,9 +12,9 @@ export function Footer() {
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold text-[#22C55E] mb-2">SLB</div>
             <p className="text-[#9CA3AF] text-sm flex items-center gap-1 justify-center md:justify-start">
-              Hecho con <Heart size={16} className="text-[#22C55E] fill-current" /> por Sebastian López Benavides
+              {t.footer.madeWith} <Heart size={16} className="text-[#22C55E] fill-current" /> {t.footer.by} Sebastian Lopez Benavides
             </p>
-            <p className="text-[#9CA3AF] text-sm mt-1">© 2026 Todos los derechos reservados</p>
+            <p className="text-[#9CA3AF] text-sm mt-1">© 2026 {t.footer.rights}</p>
           </div>
 
           {/* Social Links */}

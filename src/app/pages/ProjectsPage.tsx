@@ -4,8 +4,11 @@ import { Badge } from '../components/Badge';
 import { ExternalLink, Github } from 'lucide-react';
 import oneGameImage from '../../assets/f0d790da1127d43640d81f248eb39a3b572ee768.png';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
+import { useTranslations } from '../i18n/translations';
 
 export function ProjectsPage() {
+  const t = useTranslations();
+
   const projects = [
     {
       title: 'ONE GAME',
@@ -29,11 +32,11 @@ export function ProjectsPage() {
           className="text-center mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4 text-balance">
-            Mis <span className="text-[#22C55E]">Proyectos</span>
+            {t.sections.projectsTitle} <span className="text-[#22C55E]">{t.sections.projectsAccent}</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full mb-4"></div>
           <p className="text-[#9CA3AF] max-w-2xl mx-auto">
-            Una selección de proyectos que demuestran mis habilidades en desarrollo Full Stack
+            {t.sections.projectsSubtitle}
           </p>
         </motion.div>
 

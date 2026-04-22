@@ -6,8 +6,11 @@ import { Button } from '../components/Button';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
+import { useTranslations } from '../i18n/translations';
 
 export function ContactPage() {
+  const t = useTranslations();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,7 +20,7 @@ export function ContactPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Simulación de envío de formulario
-    toast.success('¡Mensaje enviado correctamente! Te contactaré pronto.');
+    toast.success(t.contact.success);
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -32,11 +35,11 @@ export function ContactPage() {
           className="text-center mb-12 sm:mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4">
-            Contacta<span className="text-[#22C55E]">me</span>
+            {t.sections.contactTitle}<span className="text-[#22C55E]">{t.sections.contactAccent}</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full mb-4"></div>
           <p className="text-[#9CA3AF] max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? Conversemos sobre cómo puedo ayudarte
+            {t.sections.contactSubtitle}
           </p>
         </motion.div>
 
@@ -71,7 +74,7 @@ export function ContactPage() {
                   <Phone className="text-[#3B82F6]" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#F9FAFB] mb-1">Teléfono</h3>
+                  <h3 className="font-bold text-[#F9FAFB] mb-1">{t.contact.phone}</h3>
                   <a 
                     href="tel:+573148076105"
                     className="text-[#9CA3AF] text-sm hover:text-[#3B82F6] transition-colors"
@@ -88,7 +91,7 @@ export function ContactPage() {
                   <MapPin className="text-[#22C55E]" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#F9FAFB] mb-1">Ubicación</h3>
+                  <h3 className="font-bold text-[#F9FAFB] mb-1">{t.contact.location}</h3>
                   <p className="text-[#9CA3AF] text-sm">Colombia</p>
                 </div>
               </div>
@@ -105,26 +108,26 @@ export function ContactPage() {
             <Card hover={false}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <Input
-                  label="Nombre"
+                  label={t.contact.name}
                   type="text"
-                  placeholder="Tu nombre"
+                  placeholder={t.contact.namePlaceholder}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
                 />
 
                 <Input
-                  label="Email"
+                  label={t.contact.email}
                   type="email"
-                  placeholder="tu@email.com"
+                  placeholder={t.contact.emailPlaceholder}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
                 />
 
                 <Textarea
-                  label="Mensaje"
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  label={t.contact.message}
+                  placeholder={t.contact.messagePlaceholder}
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -132,7 +135,7 @@ export function ContactPage() {
                 />
 
                 <Button type="submit" className="w-full">
-                  Enviar mensaje
+                  {t.contact.send}
                   <Send size={20} />
                 </Button>
               </form>

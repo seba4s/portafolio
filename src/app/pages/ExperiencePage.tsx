@@ -3,8 +3,11 @@ import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { Briefcase, GraduationCap } from 'lucide-react';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
+import { useTranslations } from '../i18n/translations';
 
 export function ExperiencePage() {
+  const t = useTranslations();
+
   const techGroups = [
     {
       title: 'Frontend',
@@ -55,7 +58,7 @@ export function ExperiencePage() {
           className="text-center mb-12 sm:mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4 text-balance">
-            Experiencia & <span className="text-[#22C55E]">Tecnologías</span>
+            {t.sections.experienceTitle} <span className="text-[#22C55E]">{t.sections.experienceAccent}</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full"></div>
         </motion.div>

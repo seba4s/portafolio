@@ -2,8 +2,11 @@ import { motion } from 'motion/react';
 import { Card } from '../components/Card';
 import { Quote, User, Briefcase, Code } from 'lucide-react';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
+import { useTranslations } from '../i18n/translations';
 
 export function TestimonialsPage() {
+  const t = useTranslations();
+
   const testimonials = [
     {
       name: 'Miguel Angel Mendoza Jaramillo',
@@ -39,11 +42,11 @@ export function TestimonialsPage() {
           className="text-center mb-12 sm:mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4 text-balance">
-            Testimonios & <span className="text-[#22C55E]">Recomendaciones</span>
+            {t.sections.testimonialsTitle} <span className="text-[#22C55E]">{t.sections.testimonialsAccent}</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full mb-4"></div>
           <p className="text-[#9CA3AF] max-w-2xl mx-auto">
-            Lo que dicen quienes han trabajado conmigo
+            {t.sections.testimonialsSubtitle}
           </p>
         </motion.div>
 

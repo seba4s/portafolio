@@ -3,8 +3,11 @@ import { Card } from '../components/Card';
 import { Users, Target, Code2 } from 'lucide-react';
 import profileImage from '../../assets/fotodeperfil.png';
 import { DecoCirclesGroup } from '../components/DecoraCircles';
+import { useTranslations } from '../i18n/translations';
 
 export function AboutPage() {
+  const t = useTranslations();
+
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <DecoCirclesGroup count={2} />
@@ -16,7 +19,7 @@ export function AboutPage() {
           className="text-center mb-16"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] mb-4 text-balance">
-            Acerca de <span className="text-[#22C55E]">mí</span>
+            {t.sections.aboutTitle} <span className="text-[#22C55E]">{t.sections.aboutAccent}</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#22C55E] to-[#3B82F6] mx-auto rounded-full"></div>
         </motion.div>
