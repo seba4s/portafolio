@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { DecoCirclesGroup } from './DecoraCircles';
 import { useTranslations } from '../i18n/translations';
+import profileImage from '../../assets/fotodeperfil.jpg';
 
 export function Hero() {
   const t = useTranslations();
@@ -96,30 +97,20 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:flex items-center justify-center"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              {/* Glowing background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/20 via-[#3B82F6]/20 to-transparent rounded-full blur-3xl"></div>
-              
-              {/* Grid pattern */}
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyQzU1RSIgb3BhY2l0eT0iMC4xIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
-              
-              {/* Geometric shapes */}
-              <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-[#22C55E] rounded-lg rotate-12 opacity-20"></div>
-              <div className="absolute bottom-1/4 right-1/4 w-40 h-40 border-2 border-[#3B82F6] rounded-full opacity-20"></div>
-              
-              {/* Central focus */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full border-2 border-[#22C55E] flex items-center justify-center">
-                  <div className="text-6xl text-[#22C55E] font-bold">&lt;/&gt;</div>
-                </div>
-              </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#22C55E]/30 via-[#3B82F6]/30 to-transparent rounded-full blur-2xl"></div>
+              <img
+                src={profileImage}
+                alt="Sebastian Lopez Benavides"
+                className="relative w-64 h-64 object-cover rounded-full border-4 border-[#22C55E]/20 shadow-2xl"
+              />
             </div>
           </motion.div>
         </div>
